@@ -3,13 +3,8 @@
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 $config = require dirname(__DIR__) . '/src/config.php';
 
-$epnConfig = [
-    'ePNAccount' => $config['ePNAccount'],
-    'RestrictKey' => $config['RestrictKey'],
-    'email' => $config['email'],
-];
-$epn = new \Mountpoint\eProcessingNetwork\eProcessingNetwork($epnConfig);
-$epn->setIsDevelopmentMode(true);
+$epn = new \Mountpoint\eProcessingNetwork\eProcessingNetwork($config);
+$epn->setIsDevelopmentMode($config['debug_mode']);
 
 $newCard = new \Mountpoint\eProcessingNetwork\Card();
 $newCard

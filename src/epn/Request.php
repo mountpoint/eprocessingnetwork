@@ -48,6 +48,11 @@ class Request
         ];
 
         $curl = new Curl($this->epn->getEndpoint());
+
+        if ($this->epn->getIsDevelopmentMode()) {
+            $curl->addOption(CURLOPT_VERBOSE, true);
+        }
+
         $curl
             ->addOption(CURLOPT_MAXREDIRS, 4)
             ->addOption(CURLOPT_FOLLOWLOCATION, true)
