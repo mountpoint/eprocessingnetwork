@@ -1,7 +1,7 @@
 eProcessing Network TDBE (Transparent Database Engine) API
 ========================
 
-v0.1.0
+v0.2.0
 
 ## Installation & loading
 
@@ -15,4 +15,13 @@ or
 
 ```sh
 composer require mountpoint/eprocessingnetwork
+```
+
+## Testing
+
+Local testing without PHPUnit
+
+```sh
+cp src/config.php.dist src/config.php
+php tests/index.php > index.html
 ```

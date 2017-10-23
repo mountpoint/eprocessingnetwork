@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4" : {
-            "Mountpoint\\eProcessingNetwork\\" : "src"
+            "Mountpoint\\eProcessingNetwork\\" : "src/epn"
         }
     },
     "require": {

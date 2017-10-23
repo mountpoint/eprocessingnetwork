@@ -1,24 +1,25 @@
 <?php
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
+$config = require dirname(__DIR__) . '/src/config.php';
 
-$config = [
-    'ePNAccount' => '080880',
-    'RestrictKey' => 'yFqqXJh9Pqnugfr',
-    'email' => 'mygmail@gmail.com',
+$epnConfig = [
+    'ePNAccount' => $config['ePNAccount'],
+    'RestrictKey' => $config['RestrictKey'],
+    'email' => $config['email'],
 ];
-$epn = new \Mountpoint\eProcessingNetwork\eProcessingNetwork($config);
+$epn = new \Mountpoint\eProcessingNetwork\eProcessingNetwork($epnConfig);
 $epn->setIsDevelopmentMode(true);
 
 $newCard = new \Mountpoint\eProcessingNetwork\Card();
 $newCard
-    ->setCardNumber('4111111111111111')
-    ->setExpMonth('02')
-    ->setExpYear('18')
+    ->setCardNumber($config['card']['number'])
+    ->setExpMonth($config['card']['exp_month'])
+    ->setExpYear($config['card']['exp_year'])
     ->setTotal(0.49)
     ->setAddress('Brighton Beach')
     ->setZip(12345)
-    ->setCvv2(100)
+    ->setCvv2($config['card']['security_code'])
 ;
 
 $epn->setCard($newCard);

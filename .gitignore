@@ -1,2 +1,4 @@
 .idea
 /vendor/
+/src/config.php
+index.html
