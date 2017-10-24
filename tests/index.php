@@ -11,7 +11,7 @@ $newCard
     ->setCardNumber($config['card']['number'])
     ->setExpMonth($config['card']['exp_month'])
     ->setExpYear($config['card']['exp_year'])
-    ->setTotal(0.49)
+    ->setTotal(0.01)
     ->setAddress('Brighton Beach')
     ->setZip(12345)
     ->setCvv2($config['card']['security_code'])
