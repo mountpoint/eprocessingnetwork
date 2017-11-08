@@ -24,7 +24,7 @@ class Request
     /**
      * Send request to ePN
      *
-     * @return mixed
+     * @return Response
      * @throws \ErrorException
      */
     public function send()
@@ -63,6 +63,6 @@ class Request
             ->exec()
         ;
 
-        return $curl->getOutput();
+        return new Response($curl->getOutput());
     }
 }

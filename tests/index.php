@@ -21,4 +21,4 @@ $epn->setCard($newCard);
 
 $request = new \Mountpoint\eProcessingNetwork\Request($epn);
 
-echo $request->send();
+echo $request->send()->getResponse();
