@@ -1,7 +1,7 @@
 eProcessing Network TDBE (Transparent Database Engine) API
 ========================
 
-v0.2.0
+v0.3.1
 
 ## Installation & loading
 
