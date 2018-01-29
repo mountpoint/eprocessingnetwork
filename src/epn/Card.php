@@ -5,6 +5,21 @@ namespace Mountpoint\eProcessingNetwork;
 class Card
 {
     /**
+     * @var string The cardholder’s first name.
+     */
+    private $firstName;
+
+    /**
+     * @var string The cardholder’s last name.
+     */
+    private $lastName;
+
+    /**
+     * @var string The contact phone number for the transaction.
+     */
+    private $phoneNumber;
+
+    /**
      * @var string
      */
     private $cardNumber;
@@ -43,6 +58,66 @@ class Card
      * @var integer
      */
     private $cvv2;
+
+    /**
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param string $firstName
+     *
+     * @return $this
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     *
+     * @return $this
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->phoneNumber;
+    }
+
+    /**
+     * @param string $phoneNumber
+     *
+     * @return $this
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
 
     /**
      * @return string

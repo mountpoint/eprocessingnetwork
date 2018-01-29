@@ -35,6 +35,9 @@ class Request
         $postFields = [
             'ePNAccount' => $epnConfig['ePNAccount'],
             'RestrictKey' => $epnConfig['RestrictKey'],
+            'FirstName' => $card->getFirstName(),
+            'LastName' => $card->getLastName(),
+            'Phone' => $card->getPhoneNumber(),
             'CardNo' => $card->getCardNumber(),
             'ExpMonth' => $card->getExpMonth(),
             'ExpYear' => $card->getExpYear(),
